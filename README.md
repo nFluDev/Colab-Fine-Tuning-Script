@@ -304,7 +304,9 @@ token = "", # Get a token at https://huggingface.co/settings/tokens
 )
 ```
 
-### 12\. Eğer Colab'da fine-tune edilen modeli indirmede sorun yaşıyorsanız Google Drive'a modeli kaydedip Google Drive üzerinden modeli indirebilirsiniz.
+### 12\. Google Drive'a Kaydetme
+
+Eğer Colab'da fine-tune edilen modeli indirmede sorun yaşıyorsanız Google Drive'a modeli kaydedip Google Drive üzerinden modeli indirebilirsiniz.
 
 ```python
 from google.colab import drive
