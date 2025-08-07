@@ -303,3 +303,22 @@ quantization_method = ["q4_k_m", "q8_0", "q5_k_m",],
 token = "", # Get a token at https://huggingface.co/settings/tokens
 )
 ```
+
+### 12\. Eğer Colab'da fine-tune edilen modeli indirmede sorun yaşıyorsanız Google Drive'a modeli kaydedip Google Drive üzerinden modeli indirebilirsiniz.
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+import shutil
+
+# Modelinizin mevcut yolu
+model_path = "/content/model/unsloth.Q4_K_M.gguf"
+
+# Kaydetmek istediğiniz Google Drive yolu
+drive_path = "/content/drive/MyDrive/ unsloth.Q4_K_M.gguf"
+
+# Dosyayı kopyalama
+shutil.copyfile(model_path, drive_path)
+
+print(f"Model başarıyla Google Drive'a kaydedildi: {drive_path}")
+```
